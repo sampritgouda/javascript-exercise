@@ -211,7 +211,6 @@ function create_resume(event){
     /************************************
     *       step 5 : display output     *
     *************************************/
-    display_user_data(user_cookie)
     output_section.innerText = "Resume Created"
     output_section.classList.add("output")
     output_section.classList.remove("output-error")
