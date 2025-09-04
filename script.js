@@ -26,7 +26,7 @@ function find_maximum_number(event) {
         output_error = "Please Enter Second Number";
     }
     else if(String(first_input.trim()).length > 10 || String(second_input.trim()).length > 10){
-        output_error = "Enter below 10 digit number"
+        output_error = "Entered number should be less than 10 digits"
     }
 
     if (output_error) {
@@ -81,7 +81,7 @@ function reverse_string(event){
         output_error = "Please Enter valid String"
     }
     else if(input_string.length > 20){
-        output_error = "Enter word have less than 20 character"
+        output_error = "Entered word should have less than 20 characters"
     }
 
     // display output_error and return
@@ -147,7 +147,7 @@ function find_longest_word(event){
     let has_more_character =  string_array.some(string => string.length > 20)
 
     if(has_more_character){
-        output_error = "Enter words having less than 20 characters"
+        output_error = "Entered words should have less than 20 characters"
     }
 
     }
@@ -209,10 +209,10 @@ function create_resume(event){
 
     //checking if the mobile number is valid
     else if(!is_valid_mobile_number(user_mobile_number.trim())){
-        output_error = "Enter a  valid Mobile Number"
+        output_error = "Enter a valid Mobile Number"
     }
     else if(user_name.trim().length > 10){
-        output_error = "Enter name having less than 10 character"
+        output_error = "Entered name should have less than 10 characters"
     }
 
     // display output_error and return
