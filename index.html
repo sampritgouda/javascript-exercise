@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>css exercise 2</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+
+        <!-- ********************************
+         *         wrapper container        *
+         ************************************ -->
+         
+        <div id="wrapper">
+
+        <!-- ********************************
+         *        resume section            *
+         ************************************ -->
+
+            <!-- header content -->
+            <div id="mypage-header">
+                <header>
+                    <h1 id="resume-header">Samprit Gouda</h1>
+                </header>
+            </div>
+
+            
+            <!-- ********************************
+             *       middle main content        *
+             ************************************ -->
+       
+            <div class="middle-content">
+
+                 <!-- ********************************
+                  *          left nav content        *
+                  ************************************ -->
+
+                <div id="mypage-leftnav">
+                    <aside class="side-content">
+                        <div class="sidebar-header"><h3>Objective</h3></div>
+                    </aside>
+                    <aside class="side-content">
+                        <div class="sidebar-header"><h3>Education</h3></div>
+                    </aside>
+                    <aside class="side-content">
+                        <div class="sidebar-header"><h3>Skills</h3></div>
+                    </aside>
+                    <aside class="side-content" id="project-aside">
+                        <div class="sidebar-header"><h3>Projects</h3></div>
+                    </aside>
+                </div>
+
+                
+            
+                <!-- *************************************
+                *       center content of main content   *
+                ****************************************** -->
+                <div id="mypage-center-content">
+
+                    <div class="center-content">
+
+                        <!-- objective content -->
+                        <div class="hidden">
+                            <h3 class="center-content-heading">Objective</h3>
+                        </div>
+                        <div class="content">
+                            <p class="description">	
+                                Enthusiastic full stack developer with expertise in front end HTML, CSS, JAVASCRIPT and back-end
+                                technologies , Skilled in MySQL database management and passionate about building scalable applications.
+                                Strong problem solving and teamwork abilities , Committed to continuous learning and maintaining a growth mindset.
+
+                            </p>
+                        </div>
+
+                        <!-- education content -->
+                        <div class="hidden">
+                            <h3  class="center-content-heading">Education</h3>
+                        </div>
+                        <div class="content">
+                            <ul class="education-col">
+                                <li>
+                                    B.C.A.(CS) – Govt First Grade College, Honnavar (80.39%)
+                                </li>
+                                <li>
+                                    P.U .C.– Mohan K Shetty Govt College, Honnavar (85.67%)
+                                </li>
+                                <li>
+                                    S.S.L.C. – Janata Vidyalaya, Kasarkod | (90.04%)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- skills content -->
+                        <div class="hidden">
+                            <h3  class="center-content-heading">Skills</h3>
+                        </div>
+                        <div class="content" id="skills-section">
+                            <ul class="skills-col">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>JAVA</li>
+                                <li>MYSQL</li>
+                                <li>REACT</li>
+                                <li>SPRING BOOT</li>
+                                <li>HIBERNATE</li>
+                                <li>BOOTSTRAP</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- projects content -->
+                        <div class="hidden">
+                            <h3  class="center-content-heading">Projects</h3>
+                        </div>
+                        <div class="content" id="project-section">
+                            <ul id="project-container">
+                                <li class="projects">
+
+                                    <!-- project header -->
+                                    <div class="project-header">
+                                        <h3>INSTAGRAM CLONE</h3>
+                                    </div>
+
+                                    <!-- project description -->
+                                    <p class="project-description">A Full-Stack Instagram Style social app where users can register,log in ,post photos/videos,like and comment follow others 
+                                    and view interactive feeds and profiles. The backend is built with <strong>Spring boot </strong> and <strong>Mysql</strong>
+                                    the front end with <strong>React + Bootstrap</strong>,and media is hosted on cloudinary for fast reliable 
+                                    delivery.
+                                    </p>  
+
+                                    <!-- project link -->
+                                    <a class="project-links" href="https://github.com/sampritgouda/Instagram_clone_react">project link</a>
+                                </li>   
+                                <li class="projects">
+
+                                    <!-- project header -->
+                                    <div class="project-header">
+                                        <h3>FLIPKART CLONE</h3>
+                                    </div>
+
+                                    <!-- project description -->
+                                    <p class="project-description">A Full-Stack Flipkart clone built with <strong>Spring Boot , Hibernate/JPA, Thymeleaf, CSS, and JavaScript</strong>, backed by MySQL
+                                    for data storage. Supports User, Admin, and Delivery Agent modules with role-based pages and management features.
+                                    Integrated Razorpay for real-time payment processing and
+                                    order checkout.Uses Google Maps API to calculate and display the shortest delivery route using customer pincode data.
+                                    </p>  
+
+                                    <!-- project link -->
+                                    <a class="project-links"  href="https://github.com/sampritgouda/Flipcart_clone">project link</a>
+                                </li>
+                                <li class="projects">
+
+                                    <!-- project header -->
+                                    <div class="project-header">
+                                        <h3>FOOD APP</h3>
+                                    </div>
+
+                                    <!-- project description -->
+                                    <p class="project-description">
+                                    The Food Delivery App is a web-based platform built with JSP, Servlets, JavaScript, and CSS, inspired by 
+                                    Swiggy and Zomato.It enables users to browse restaurants, explore menus, and add items to their cart.Customers 
+                                    can place orders, track them, and view order history seamlessly. Provides an interactive and responsive UI for a smooth online food ordering experience.
+                                    </p>  
+
+                                    <!-- project link -->
+                                    <a class="project-links" href="https://github.com/sampritgouda/Food_App">project link</a>
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- *************************************
+            *                Foter Section           *
+            ****************************************** -->
+            <div id="mypage-footer">
+                <footer>
+                    <div id="footer-head">Contact Info</div>
+                    <div>
+                        <p>
+                            <span>Email :</span>
+                            goudasamprit@gmail.com
+                        </p>
+                        <p>
+                            <span>Phone :</span>
+                            <span id="resume-mobile-number">7019796752</span>
+                        </p>
+                    </div>
+                </footer>
+            </div> 
+
+
+            <!-- *************************************
+            *      finding maxium number section     *
+            ****************************************** -->
+            <div class="js-section">
+                <div class="js-container">
+
+                    <!-- card header -->
+                    <h1 class="section-header">Find Max Number</h1>
+                    <div>
+                        <form onsubmit="find_maximum_number(event)" class="form-container">
+                            <div class="form-content">
+                                <label for="number1" class="form-label">First Number<span class="require">*</span></label>
+                                <input type="number"  placeholder="Enter First Number" id="number1" class="form-input"/>
+                            </div>
+                            <div class="form-content">
+                                <label for="number2" class="form-label">Second Number<span class="require">*</span></label>
+                                <input type="number"  placeholder="Enter Second Number" id="number2" class="form-input"/>
+                            </div>
+                            <div class="form-content">
+                                <button type="submit" class="submit-button">Find maximum</button>
+                            </div>
+                        </form>
+                        <div id="max-output" class="output"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- *************************************
+            *            Reversing the String        *
+            ****************************************** -->
+            <div class="js-section">
+                <div class="js-container">
+
+                    <!-- card header -->
+                    <h1 class="section-header">Reverse String</h1>
+                    <div>
+                        <form onsubmit="reverse_string(event)" class="form-container">
+                            <div class="form-content">
+                                <label for="input-string" class="form-label">Enter String<span class="require">*</span></label>
+                                <input type="text"  placeholder="Enter String" id="input-string" class="form-input"/>
+                            </div>
+    
+                            <div class="form-content">
+                                <button type="submit" class="submit-button">Reverse</button>
+                            </div>
+                        </form>
+                        <div id="reverse-output" class="word-output"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- *************************************
+            *          finding Longest Word          *
+            ****************************************** -->
+            <div class="js-section">
+                <div class="js-container">
+
+                    <!-- card header -->
+                    <h1 class="section-header">Find Longest Word</h1>
+                    <div>
+                        <form onsubmit="find_longest_word(event)" class="form-container">
+                            <div class="form-content">
+                                <label for="words-array" class="form-label">Enter Words<span class="require">*</span></label>
+                                <input type="text"  placeholder="Enter Comma Seperated Words" id="words-array" class="form-input"/>
+                            </div>
+    
+                            <div class="form-content">
+                                <button type="submit" class="submit-button">Find Longest</button>
+                            </div>
+                        </form>
+                        <div id="longest-word-output" class="word-output"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- *************************************
+            *              Create Resume             *
+            ****************************************** -->
+            <div class="js-section">
+                <div class="js-container">
+
+                    <!-- card header -->
+                    <h1 class="section-header">Resume Maker</h1>
+                    <div>
+                        <form onsubmit="create_resume(event)" class="form-container">
+                            <div class="form-content">
+                                <label for="user-name" class="form-label">Enter name<span class="require">*</span></label>
+                                <input type="text"  placeholder="Enter Your Name" id="user-name" class="form-input"/>
+                            </div>
+                            <div class="form-content">
+                                <label for="user-mobile-number" class="form-label">Enter Mobile Number<span class="require">*</span></label>
+                                <input type="text"  placeholder="Enter Mobile Number" id="user-mobile-number" class="form-input" maxlength="10"/>
+                            </div>
+    
+                            <div class="form-content">
+                                <button type="submit" class="submit-button">Create Resume</button>
+                            </div>
+                        </form>
+                        <div id="resume-create-output" class="output"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,412 @@
+/* Importing fonts from Google Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@300;600&family=Oswald:wght@400;500&family=Poppins:wght@400;600&display=swap');
+
+body{
+    margin: 0;
+}
+
+/*****************************************
+*    wrapper container for my resume     *
+******************************************/
+
+#wrapper{
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/*****************************************
+*                   heading              *
+******************************************/
+
+#mypage-header{
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;      
+    background-color:#228B22;
+}
+ 
+#resume-header{
+    text-align: center;
+    color: #ffffff;
+}
+
+.resume-heading{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold;
+}
+
+/*****************************************
+*                   sidbead              *
+******************************************/
+
+#mypage-leftnav{
+    width: 40%;
+}
+
+.sidebar-header{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.side-content{
+    padding: 40px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-left: 4px solid #228B22;
+}
+
+/*****************************************
+*              main content              *
+******************************************/
+
+
+.middle-content{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color:rgba(36, 60, 81, 0.151) ;
+}
+
+
+.content{
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.center-content-heading{
+    margin-bottom: 0;
+}
+
+/* objective */
+
+.description{
+    padding-left: 30px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+/* education section */
+
+.education-col{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* 
+skills section */
+
+.skills-col{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-right: 20px;
+}
+
+#skills-section{
+    font-size: 14px;
+}
+
+/* project section */
+
+#project-section{
+    font-size: 15px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+#project-container{
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.projects{
+    margin-top: 20px;
+}
+
+.project-description{
+    text-align: justify;
+}
+
+#project-aside{
+    min-height: 500px;
+    margin-bottom: 20px;
+}
+
+.project-header{
+    font-size: 15px;
+    font-weight: bold;
+}
+.hidden{
+    display: none;
+    text-align: center;
+}
+
+.project-links{
+    cursor: pointer;
+}
+
+.project-links:hover{
+    color: red;
+}
+
+/*****************************************
+*              footer content            *
+******************************************/
+
+
+#mypage-footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 0;
+    background-color: #228B22;
+    color: #ffffff;
+}
+
+#footer-head{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+/*****************************************
+*    styling for javascript section      *
+******************************************/
+
+
+.js-section{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.js-container{
+    width: 40%;
+    padding: 0 40px;
+    background-color: #D3D3D3;
+    border-radius: 30px;
+}
+
+
+/* javascript section header */
+
+.section-header{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #800020;
+}
+
+.form-container{
+    width: 100%;
+}
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form-label{
+    font-size: 18px;
+    font-weight: bold;
+    color: #6E260E;
+}
+
+.require{
+    margin-left: 5px;
+    color:#F52727 ;
+}
+
+.form-input{
+    padding: 2px 10px;
+    margin-top: 10px;
+    width: 95%;
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-size: 15px;
+}
+
+.form-input::placeholder{
+    font-size: 12px;
+}
+
+.form-input:focus{
+    border: 2px solid #228B22;
+}
+
+.submit-button{
+    border-radius: 5px;
+    background-color: #708090;
+    width: 100%;
+    text-align: center;
+    padding:10px 5px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-button:hover{
+    background-color:#70809074 ;
+}
+
+.output{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    height: 40px;
+}
+
+.word-output{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 40px;
+    white-space: normal;  
+    word-wrap: break-word;
+}
+
+.output-error{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #F52727;
+    height: 40px;
+}
+
+/*****************************************
+*         Used for mobile view           *
+******************************************/
+
+@media (max-width : 576px) {
+/* 
+    header section */
+    #mypage-header{
+        padding: 15px 0;
+    }
+
+    #wrapper{
+        padding:5px 15px;
+        font-size: 13px;
+    }
+    .hidden{
+        display: block;
+        text-align: left;
+        margin-top: 20px;
+        font-size: 17px;
+        font-weight: bold;
+        padding-left: 20px;
+    }
+    #mypage-leftnav{
+        display: none;
+    }
+
+    .content{
+        min-height: fit-content;
+        height: auto;
+        padding: 20px  0 0 0 ;
+    }
+
+    .project-header{
+        font-size: 12px;
+    }
+
+    /* skills section */
+
+    .skills-col{
+        font-size: 10px;
+    }
+
+
+    /* project section */
+    #project-section{
+        min-height:fit-content ;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .description{
+        padding: 0 10px;
+        margin-top: 0;
+    }
+
+    .education-col{
+        padding-left: 20px;
+    }
+
+    .skills-col , #project-container{
+        padding-left: 20px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    /* for javascript cards */
+
+    .js-container{
+        width: 70%;
+    }
+
+    .section-header{
+        font-size: 20px;
+    }
+
+    .form-label{
+        font-size: 15px;
+    }
+
+    .output-error{
+        font-size: 15px;
+    }
+
+    .output{
+        font-size: 15px;
+    }
+}
+
+/*****************************************
+*            for desktop view            *
+******************************************/
+
+@media(min-width : 576px) and (max-width: 768px) {
+    #wrapper{
+        font-size: 15px;
+    }
+
+    #project-aside{
+        min-height: 650px;
+    }
+
+    #project-section{
+        padding-bottom: 20px;
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+    }
+
+    .js-container{
+        width: 60%;
+    }
+}
+
+
