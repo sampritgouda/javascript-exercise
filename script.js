@@ -25,6 +25,9 @@ function find_maximum_number(event) {
     } else if (second_input.trim() === "") {
         output_error = "Please Enter Second Number";
     }
+    else if(String(first_input.trim()).length > 10 || String(second_input.trim()).length > 10){
+        output_error = "Enter below 10 digit number"
+    }
 
     if (output_error) {
         output_section.innerText = output_error;
@@ -73,7 +76,13 @@ function reverse_string(event){
     /************************************
     *       step 2 : Validation         *
     *************************************/
-    let output_error = input_string === "" ? "Please Enter valid String" : "";
+    let output_error 
+    if(input_string === "" ){
+        output_error = "Please Enter valid String"
+    }
+    else if(input_string.length > 20){
+        output_error = "Enter word have less than 20 character"
+    }
 
     // display output_error and return
     if(output_error){
@@ -86,7 +95,7 @@ function reverse_string(event){
     /************************************
     *     step 3 : Reversing String     *
     *************************************/
-    let reversed_string = input_string.split("").reverse().join("")
+    let reversed_string = input_string.trim().split("").reverse().join("")
 
     /************************************
     *      step 4 : display output      *
@@ -113,11 +122,35 @@ function find_longest_word(event){
     let input_string = document.getElementById("words-array").value.trim();
     let output_section = document.getElementById("longest-word-output")
 
+    let output_error
+    let string_array
+
     /************************************
     *       step 2 : Validation         *
     *************************************/
-    let output_error = input_string === "" ? "Please Enter valid String" : "";
 
+   if(input_string === ""){
+       output_error = "Please Enter valid String";
+    }
+    else {
+
+    /**************************************************
+    *  step 3 : splittting the input string by comma  *
+    ***************************************************/
+    string_array = input_string.split(",")
+
+    /**************************************************
+    *    step 4 : trim leading and trailing spaces    *
+    ***************************************************/
+    string_array = string_array.map(word => word.trim())
+
+    let has_more_character =  string_array.some(string => string.length > 20)
+
+    if(has_more_character){
+        output_error = "Enter words having less than 20 characters"
+    }
+
+    }
     // display output_error and return
     if(output_error){
         output_section.innerText = output_error;
@@ -127,15 +160,7 @@ function find_longest_word(event){
         return;
     }
 
-    /**************************************************
-    *  step 3 : splittting the input string by comma  *
-    ***************************************************/
-    let string_array = input_string.split(",")
 
-    /**************************************************
-    *    step 4 : trim leading and trailing spaces    *
-    ***************************************************/
-    string_array = string_array.map(word => word.trim())
 
     /**************************************************
     *    step 5 : find the longest word from array    *
@@ -183,8 +208,11 @@ function create_resume(event){
     }
 
     //checking if the mobile number is valid
-    else if(!is_valid_mobilenumber(user_mobile_number.trim())){
+    else if(!is_valid_mobile_number(user_mobile_number.trim())){
         output_error = "Enter a  valid Mobile Number"
+    }
+    else if(user_name.trim().length > 10){
+        output_error = "Enter name having less than 10 character"
     }
 
     // display output_error and return
@@ -199,7 +227,7 @@ function create_resume(event){
     /************************************
     *  step 3 : creating user data json *
     *************************************/
-    let user_data ={"user_name" : user_name,"user_mobile_number" : user_mobile_number}
+    let user_data ={"user_name" : user_name.trim(),"user_mobile_number" : user_mobile_number}
     let user_cookie
 
     /************************************
@@ -268,7 +296,7 @@ function create_resume(event){
   *           Check if a Number is Valid Mobile Number          *
   **************************************************************/
 
- function is_valid_mobilenumber(mobile_number){
+ function is_valid_mobile_number(mobile_number){
     return /^\d{10}$/.test(mobile_number)
 
  }

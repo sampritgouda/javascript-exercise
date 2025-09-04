@@ -238,7 +238,8 @@ skills section */
 .form-input{
     padding: 2px 10px;
     margin-top: 10px;
-    width: 95%;
+    width: 100%;
+    box-sizing: border-box;
     height: 30px;
     outline: none;
     border-radius: 5px;
@@ -381,6 +382,16 @@ skills section */
 
     .output{
         font-size: 15px;
+    }
+
+    .form-input{
+        padding: 0 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-input::placeholder{
+        font-size: 10px;
     }
 }
 
