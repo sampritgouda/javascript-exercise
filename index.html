@@ -203,8 +203,9 @@
 
                     <!-- card header -->
                     <h1 class="section-header">Find Max Number</h1>
+
                     <div>
-                        <form onsubmit="find_maximum_number(event)" class="form-container">
+                        <form class="form-container" id="max-form" name="max-form">
                             <div class="form-content">
                                 <label for="number1" class="form-label">First Number<span class="require">*</span></label>
                                 <input type="number"  placeholder="Enter First Number" id="number1" class="form-input"/>
@@ -217,7 +218,7 @@
                                 <button type="submit" class="submit-button">Find maximum</button>
                             </div>
                         </form>
-                        <div id="max-output" class="output"></div>
+                        <div id="max-output" class="output" ></div>
                     </div>
                 </div>
             </div>
@@ -232,7 +233,7 @@
                     <!-- card header -->
                     <h1 class="section-header">Reverse String</h1>
                     <div>
-                        <form onsubmit="reverse_string(event)" class="form-container">
+                        <form id="reverse-word-form" name="reverse-word-form" class="form-container">
                             <div class="form-content">
                                 <label for="input-string" class="form-label">Enter String<span class="require">*</span></label>
                                 <input type="text"  placeholder="Enter String" id="input-string" class="form-input"/>
@@ -257,7 +258,7 @@
                     <!-- card header -->
                     <h1 class="section-header">Find Longest Word</h1>
                     <div>
-                        <form onsubmit="find_longest_word(event)" class="form-container">
+                        <form id="longest-word-form" name="longest-word-form" class="form-container">
                             <div class="form-content">
                                 <label for="words-array" class="form-label">Enter Words<span class="require">*</span></label>
                                 <input type="text"  placeholder="Enter Comma Seperated Words" id="words-array" class="form-input"/>
@@ -282,7 +283,7 @@
                     <!-- card header -->
                     <h1 class="section-header">Resume Maker</h1>
                     <div>
-                        <form onsubmit="create_resume(event)" class="form-container">
+                        <form id="cookie-form" name="cookie-form" class="form-container">
                             <div class="form-content">
                                 <label for="user-name" class="form-label">Enter name<span class="require">*</span></label>
                                 <input type="text"  placeholder="Enter Your Name" id="user-name" class="form-input"/>

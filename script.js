@@ -2,7 +2,7 @@
   *                finding maximum number                *
   ********************************************************/
 
-function find_maximum_number(event) {
+function find_maximum_number_callback(event) {
     //preventing pageloading
     event.preventDefault();
 
@@ -26,7 +26,7 @@ function find_maximum_number(event) {
         output_error = "Please Enter Second Number";
     }
     else if(String(first_input.trim()).length > 10 || String(second_input.trim()).length > 10){
-        output_error = "Entered number should be less than 10 digits"
+        output_error = "Entered number should not exceed 10 digits"
     }
 
     if (output_error) {
@@ -53,7 +53,7 @@ function find_maximum_number(event) {
      *********************************************/
     output_section.classList.remove("output-error");
     output_section.classList.add("output");
-    output_section.innerText = "Output: " + max;
+    output_section.innerText = `Output: ${max}`;
 }
 
 
@@ -62,7 +62,7 @@ function find_maximum_number(event) {
   ************************************************************/
 
 
-function reverse_string(event){
+function reverse_string_callback(event){
 
     // prevent autosubmission loading
     event.preventDefault();
@@ -81,7 +81,7 @@ function reverse_string(event){
         output_error = "Please Enter valid String"
     }
     else if(input_string.length > 20){
-        output_error = "Entered word should have less than 20 characters"
+        output_error = "Entered word should not exceed 20 characters"
     }
 
     // display output_error and return
@@ -111,7 +111,7 @@ function reverse_string(event){
   *                      find longest word                     *
   **************************************************************/
 
-function find_longest_word(event){
+function find_longest_word_callback(event){
 
     // prevent autosubmission loading
     event.preventDefault();
@@ -147,7 +147,7 @@ function find_longest_word(event){
     let has_more_character =  string_array.some(string => string.length > 20)
 
     if(has_more_character){
-        output_error = "Entered words should have less than 20 characters"
+        output_error = "Entered words should not exceed 20 characters"
     }
 
     }
@@ -183,7 +183,7 @@ function find_longest_word(event){
   *                          create resume                     *
   **************************************************************/
 
-function create_resume(event){
+function create_resume_callback(event){
 
     // prevent autosubmission loading
     event.preventDefault();
@@ -212,7 +212,7 @@ function create_resume(event){
         output_error = "Enter a valid Mobile Number"
     }
     else if(user_name.trim().length > 10){
-        output_error = "Entered name should have less than 10 characters"
+        output_error = "Entered name should not exceed 10 characters"
     }
 
     // display output_error and return
@@ -233,7 +233,7 @@ function create_resume(event){
     /************************************
     *       step 4 :  creating cookie   *
     *************************************/
-    document.cookie = encodeURIComponent(`user_data = ${JSON.stringify(user_data)}; path = /;`)
+    document.cookie = `user_data=${encodeURIComponent(JSON.stringify(user_data))}; path=/`;
     user_cookie = get_user_cookie()
  
     /************************************
@@ -300,3 +300,23 @@ function create_resume(event){
     return /^\d{10}$/.test(mobile_number)
 
  }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    //calling a function to find maximum number after form submit
+    document.getElementById("max-form")
+    .addEventListener("submit", find_maximum_number_callback);
+    
+    //calling a function to reverse word after form submit
+    document.getElementById("reverse-word-form")
+    .addEventListener("submit", reverse_string_callback);
+
+    //calling a function to find longest word after form submit
+    document.getElementById("longest-word-form")
+    .addEventListener("submit", find_longest_word_callback);
+
+    //calling a function to create cookie after form submit
+      document.getElementById("cookie-form")
+              .addEventListener("submit", create_resume_callback);
+    });
+
